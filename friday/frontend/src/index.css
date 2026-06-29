@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    @apply bg-gray-950 text-gray-100 font-sans antialiased;
+  }
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-900;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-700 rounded-full;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-gray-900 border border-gray-800 rounded-2xl p-5;
+  }
+  .btn-primary {
+    @apply bg-friday-500 hover:bg-friday-600 text-white font-medium px-4 py-2 rounded-xl transition-colors duration-200;
+  }
+  .btn-ghost {
+    @apply hover:bg-gray-800 text-gray-300 hover:text-white font-medium px-4 py-2 rounded-xl transition-colors duration-200;
+  }
+  .input {
+    @apply bg-gray-800 border border-gray-700 focus:border-friday-500 focus:ring-1 focus:ring-friday-500 rounded-xl px-4 py-2.5 text-white placeholder-gray-500 outline-none transition-all duration-200 w-full;
+  }
+  .badge-free {
+    @apply bg-gray-800 text-gray-400 text-xs font-medium px-2 py-0.5 rounded-full;
+  }
+  .badge-pro {
+    @apply bg-friday-900 text-friday-100 text-xs font-medium px-2 py-0.5 rounded-full;
+  }
+  .badge-premium {
+    @apply bg-amber-900/50 text-amber-300 text-xs font-medium px-2 py-0.5 rounded-full;
+  }
+}
